@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://www.intensify.co.in/</loc><changefreq>monthly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://www.intensify.co.in/about</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.intensify.co.in/products</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.intensify.co.in/products/aquawash-series</loc><priority>0.6</priority></url>
+  <url><loc>https://www.intensify.co.in/products/powerclean-series</loc><priority>0.6</priority></url>
+  <url><loc>https://www.intensify.co.in/products/multiline-series</loc><priority>0.6</priority></url>
+  <url><loc>https://www.intensify.co.in/products/tunnelwash-series</loc><priority>0.6</priority></url>
+  <url><loc>https://www.intensify.co.in/products/solvacs</loc><priority>0.6</priority></url>
+  <url><loc>https://www.intensify.co.in/products/vaiocs</loc><priority>0.6</priority></url>
+  <url><loc>https://www.intensify.co.in/products/ultrasonic-cleaners</loc><priority>0.6</priority></url>
+  <url><loc>https://www.intensify.co.in/products/ngct-mecanofast</loc><priority>0.6</priority></url>
+  <url><loc>https://www.intensify.co.in/services</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.intensify.co.in/industries</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.intensify.co.in/industries/automotive-e-mobility</loc><priority>0.6</priority></url>
+  <url><loc>https://www.intensify.co.in/industries/engineering</loc><priority>0.6</priority></url>
+  <url><loc>https://www.intensify.co.in/industries/medical</loc><priority>0.6</priority></url>
+  <url><loc>https://www.intensify.co.in/industries/cutting-tools</loc><priority>0.6</priority></url>
+  <url><loc>https://www.intensify.co.in/industries/defence-ammunition</loc><priority>0.6</priority></url>
+  <url><loc>https://www.intensify.co.in/industries/aerospace</loc><priority>0.6</priority></url>
+  <url><loc>https://www.intensify.co.in/industries/heat-treatment</loc><priority>0.6</priority></url>
+  <url><loc>https://www.intensify.co.in/industries/renewable-energy</loc><priority>0.6</priority></url>
+  <url><loc>https://www.intensify.co.in/contact</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+</urlset>
