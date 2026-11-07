@@ -1,0 +1,151 @@
+@import "@fontsource-variable/inter";
+@import "@fontsource-variable/manrope";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --nav-h: 76px;
+  }
+
+  * {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: var(--nav-h);
+  }
+
+  body {
+    @apply bg-offwhite text-ink font-sans antialiased;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background: #ffd000;
+    color: #0a0a0a;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-display tracking-tightest;
+    text-wrap: balance;
+  }
+
+  /* Accessible focus ring */
+  a:focus-visible,
+  button:focus-visible,
+  input:focus-visible,
+  textarea:focus-visible,
+  select:focus-visible {
+    outline: 3px solid #0a0a0a;
+    outline-offset: 2px;
+  }
+}
+
+@layer components {
+  /* Global fluid container.
+     Drives width for every page, the navbar and the footer.
+     - Phones (<=480px): full width with comfortable ~5% (20px) gutters.
+     - Everything above: 91% of the viewport (balanced ~4.5% side gutters),
+       capped at 1600px for a spacious, premium, Apple-like composition.
+       Yields ~91% usage up to ~1758px, ~83% at 1920px — content never
+       touches the viewport edges. */
+  .container-px {
+    width: min(91%, theme("maxWidth.container"));
+    margin-inline: auto;
+  }
+  @media (max-width: 480px) {
+    .container-px {
+      width: 100%;
+      padding-inline: 1.25rem;
+    }
+  }
+
+  .eyebrow {
+    @apply inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.2em];
+  }
+
+  /* Signature brand motif: hard offset shadow */
+  .offset-box {
+    @apply border-2 border-ink bg-white transition-all duration-300 ease-premium;
+    box-shadow: 8px 8px 0 0 #0a0a0a;
+  }
+  .offset-box:hover {
+    transform: translate(-3px, -3px);
+    box-shadow: 12px 12px 0 0 #ffd000;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-bold uppercase tracking-wider transition-all duration-300 ease-premium;
+    padding: 0.95rem 1.6rem;
+  }
+  .btn-primary {
+    @apply btn bg-yellow text-ink;
+  }
+  .btn-primary:hover {
+    @apply bg-ink text-yellow;
+  }
+  .btn-dark {
+    @apply btn bg-ink text-white;
+  }
+  .btn-dark:hover {
+    @apply bg-yellow text-ink;
+  }
+  .btn-outline {
+    @apply btn border-2 border-ink bg-transparent text-ink;
+  }
+  .btn-outline:hover {
+    @apply bg-ink text-white;
+  }
+  .btn-ghost-light {
+    @apply btn border-2 border-white/70 bg-transparent text-white;
+  }
+  .btn-ghost-light:hover {
+    @apply border-white bg-white text-ink;
+  }
+
+  .link-underline {
+    @apply relative inline-flex items-center gap-1.5 font-semibold;
+  }
+  .link-underline::after {
+    content: "";
+    @apply absolute -bottom-0.5 left-0 h-[2px] w-0 bg-ink transition-all duration-300 ease-premium;
+  }
+  .link-underline:hover::after {
+    @apply w-full;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  .grain {
+    background-image: radial-gradient(
+      rgba(10, 10, 10, 0.045) 1px,
+      transparent 1px
+    );
+    background-size: 4px 4px;
+  }
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
